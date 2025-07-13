@@ -10,7 +10,7 @@
   <meta property="og:url" content="https://pkpallaw16.github.io" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Pallaw Kumar | Portfolio</title>
- <style>
+  <style>
     html, body {
       margin: 0;
       padding: 0;
@@ -54,8 +54,7 @@
       margin: auto;
     }
     aside {
-      width: 100px;
-      flex: 0.10;
+      width: 250px;
       flex-shrink: 0;
       background-color: #eef6ff;
       padding: 1rem;
@@ -80,8 +79,12 @@
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       flex: 1 1 calc(45% - 1rem);
-      min-width: 280px;
       transition: transform 0.2s ease-in-out;
+    }
+    @media (max-width: 768px) {
+      .project, .skill, .blog-post, .research-item, .teaching-item {
+        flex: 1 1 100%;
+      }
     }
     .project:hover {
       transform: translateY(-4px);
@@ -142,9 +145,8 @@
         flex-direction: column;
       }
       aside {
-	width: 100px;
+        width: 100%;
         display: none;
-        height: auto;
         border-left: none;
         border-top: 2px solid #ccc;
       }
@@ -159,14 +161,6 @@
         font-size: 1rem;
       }
     }
-      aside {
-        width: 100px;
-        position: relative;
-        height: auto;
-        border-left: none;
-        border-top: 2px solid #ccc;
-      }
-    }
   </style>
 </head>
 <body>
@@ -176,9 +170,10 @@
       <a href="#portfolio">Portfolio</a>
       <a href="#resume">Resume</a>
       <a href="#research">Research</a>
-      <a href="#teaching">Mentorship</a>
+      <a href="#teaching">Teaching</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button id="toggle-sidebar" style="display:none;">Toggle Focus Panel</button>
     <div id="container">
       <main>
          <section id="intro">
