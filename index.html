@@ -3,233 +3,292 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pallaw Kumar | Machine Learning Engineer and Data Scientist Portfolio" />
+  <meta property="og:title" content="Pallaw Kumar Portfolio" />
+  <meta property="og:description" content="ML, Software, and Data Science Projects | UIUC Graduate | Resume, Contact, Blog" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pkpallaw16.github.io" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Pallaw Kumar | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      box-sizing: border-box;
+ <style>
+    html, body {
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      height: 100%;
     }
-    body {
-      background: linear-gradient(145deg, #e6e6e6, #ffffff);
-      color: #2d2d2d;
-      padding-top: 60px;
+    #page {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
-    header {
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: white;
-      padding: 60px 20px 20px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    #container {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
     }
     nav {
-      background: #ffffff;
-      padding: 10px 20px;
+      background-color: #222;
+      padding: 1rem;
       text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-      position: fixed;
+      position: sticky;
       top: 0;
-      width: 100%;
       z-index: 1000;
+      width: 100%;
     }
     nav a {
+      color: white;
       margin: 0 15px;
       text-decoration: none;
-      color: #1e3c72;
-      font-weight: 600;
-      transition: color 0.3s;
+      font-weight: bold;
     }
     nav a:hover {
-      color: #2a5298;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2rem;
-      font-weight: 300;
-    }
-    section {
-      padding: 30px 20px;
-      max-width: 1000px;
-      margin: 20px auto;
-    }
-    section h2 {
-      font-size: 2rem;
-      color: #1e3c72;
-      margin-bottom: 20px;
-      border-left: 5px solid #2a5298;
-      padding-left: 10px;
-    }
-    .card {
-      background: #ffffff;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 5px 5px 15px #cccccc, -5px -5px 15px #ffffff;
-      margin-bottom: 15px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.02);
-      box-shadow: 8px 8px 20px #cccccc, -8px -8px 20px #ffffff;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #1e3c72;
-      color: white;
-    }
-    .social-links a {
-      margin: 0 10px;
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .social-links a:hover {
       text-decoration: underline;
     }
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+    aside {
+      width: 100px;
+      flex: 0.10;
+      flex-shrink: 0;
+      background-color: #eef6ff;
+      padding: 1rem;
+      border-left: 2px solid #ccc;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+    h1, h2, h3 {
+      color: #003366;
+    }
+    .sticky-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .project, .skill, .blog-post, .research-item, .teaching-item {
+      background-color: #d0e7ff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      flex: 1 1 calc(45% - 1rem);
+      min-width: 280px;
+      transition: transform 0.2s ease-in-out;
+    }
+    .project:hover {
+      transform: translateY(-4px);
+    }
+    .featured-project {
+      background-color: #e6f0fa;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .featured-project img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      width: 100%;
+    }
+    a {
+      color: #007acc;
+    }
+    a:hover {
+      color: #005c99;
+    }
+    .button-download {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 0.5rem 1rem;
+      background-color: #007acc;
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    .button-download:hover {
+      background-color: #005c99;
+    }
+    ul.skills-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul.skills-list li {
+      margin: 0.3rem 0;
+    }
+    aside h3 {
+      margin-top: 0;
+      color: #003366;
+    }
+    aside ul {
+      padding-left: 20px;
+    }
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
+      #container {
+        flex-direction: column;
       }
-      section h2 {
-        font-size: 1.5rem;
+      aside {
+	width: 100px;
+        display: none;
+        height: auto;
+        border-left: none;
+        border-top: 2px solid #ccc;
       }
-      nav a {
-        display: inline-block;
-        margin: 10px 10px;
+      #toggle-sidebar {
+        display: block;
+        margin: 1rem;
+        background-color: #007acc;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+    }
+      aside {
+        width: 100px;
+        position: relative;
+        height: auto;
+        border-left: none;
+        border-top: 2px solid #ccc;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Pallaw Kumar</h1>
-    <p>Aspiring AI/ML Engineer | AI Enthusiast | Lifelong Learner</p>
-  </header>
-
-  <nav>
-    <a href="#intro">Intro</a>
-    <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#industry-exp">Industry Exp</a>
-    <a href="#research-exp">Research Exp</a>
-    <a href="#achievements">Achievements</a>
-  </nav>
-
-  <section id="intro">
-    <h2>Intro</h2>
-    <div class="card">
-      <p>Hello! I'm a passionate AI enthusiast with a deep interest in Computer Vision and Natural Language Processing. My journey in data science is driven by a desire to develop intelligent systems that can perceive, understand, and generate human-like responses. I'm especially fascinated by how machines can interpret images and text to solve real-world challenges, and I continually seek opportunities to build innovative solutions that make an impact.</p>
-    </div>
+  <div id="page">
+    <nav>
+      <a href="#intro">Intro</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#resume">Resume</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div id="container">
+      <main>
+         <section id="intro">
+    <h1>👋 Hi, I'm Pallaw</h1>
+    <p><img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Emojione_1F4BB.svg" alt="Laptop icon" width="40" /> A Machine Learning Engineer and UIUC MCS+Stats graduate building practical AI systems with scalable infrastructure. I combine ML, data, and software to solve real-world problems with measurable impact.</p>
+    <a class="button-download" href="Pallaw_Kumar_Resume.pdf" target="_blank">📄 Download My Resume</a>
   </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="card">
-      <p><strong>Master in Computer Science</strong> – University of Illinois Urbana-Champaign (2023–2024)</p>
-      <p><strong>M.S. in Statistics</strong> – University of Illinois Urbana-Champaign (2022–2023)</p>
-      <p><strong>B.E in Information Science</strong> – XYZ Institute of Technology (2011–2015)</p>
+  <section id="portfolio">
+    <h1>🛠️ Featured Project</h1>
+    <div class="featured-project">
+      <h2>FastAPI Model Deployment</h2>
+      <p>Lightweight RESTful API framework to deploy ML models for regression/classification tasks. Modular, Docker-ready, and easily integrated into CI/CD pipelines.</p>
+      <img src="assets/fastapi_demo.png" alt="FastAPI Screenshot">
+      <p><a href="https://github.com/Pkpallaw16/FastAPI" target="_blank">GitHub Repo</a></p>
     </div>
-  </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-      <p><strong>Autonomous Vehicle Lane Detection</strong> – Built a real-time lane detection system using OpenCV and Deep Learning in ROS framework.</p>
-      <p><strong>Image-Caption-Generation</strong> – Multimodal/CV/image-to-text <a href="https://github.com/Pkpallaw16/Image-Caption-Generation">GitHub Link</a></p>
-      <p><strong>Patch Attack and Response Function</strong> – Trustworthy ML/Algo-Optimization <a href="https://github.com/Pkpallaw16/Patch-Attack-and-Response-Function">GitHub Link</a></p>
-      <p><strong>Hotel Search Engine</strong> – Word2Vec/NLP <a href="https://github.com/Pkpallaw16/Hotel-Search-Engine">GitHub Link</a></p>
-      <p><strong>Information Retrieval</strong> – KNN/Feature Extraction/NLP <a href="https://github.com/Pkpallaw16/Machine-Learning-Algorithms/blob/main/Information_Retreival.ipynb">GitHub Link</a></p>
-      <p><strong>Topic Modeling</strong> – Cosine Similarity/NLP <a href="https://github.com/Pkpallaw16/Natural-Language-Processing/blob/main/Topic_Modelling.ipynb">GitHub Link</a></p>
-      <p><strong>Word Embedding</strong> – Vectorization/Tokenisation/NLP <a href="https://github.com/Pkpallaw16/Natural-Language-Processing/blob/main/Word_Embeddings.ipynb">GitHub Link</a></p>
-      <p><strong>Cifar10 Classification</strong> – CNN/PyTorch/Transformer <a href="https://github.com/Pkpallaw16/Deep-Learning/blob/main/DL_Pytorch_cifar10.ipynb">GitHub Link</a></p>
-      <p><strong>Boston Housing Regression</strong> – Tensorflow/Python <a href="https://github.com/Pkpallaw16/Deep-Learning/blob/main/DL_Tensorflow_Boston_Housing_Regression.ipynb">GitHub Link</a></p>
-      <p><strong>Text Classification</strong> –LSTM/Keras  <a href="https://github.com/Pkpallaw16/Machine-Learning-Algorithms/blob/main/Text_Classification.ipynb">GitHub Link</a></p>
-      <p><strong>Human Activity Recognition</strong> – Pandas/Scikit-Learn <a href="https://github.com/Pkpallaw16/Machine-Learning-Algorithms/blob/main/Health_Activity_Recognition_assignment.ipynb">GitHub Link</a></p>
-      <p><strong>Walmart Weekly Sales Prediction</strong> – ARIMA/SARIMA/RF <a href="https://github.com/Pkpallaw16/WalmartSalesForecast/blob/main/Group12_STAT_429_Project_Report.pdf">GitHub Link</a></p>
-      <p><strong>DSA</strong> <a href="https://github.com/Pkpallaw16/Data-Structure-And-Algorithms">GitHub Link</a></p>
+    <h2>🚀 Other Projects</h2>
+    <div class="sticky-grid">
+      <div class="project">
+        <h3>📈 Retail Sales Forecasting</h3>
+        <p>Forecasted store sales using ARIMA, Prophet, and XGBoost; reduced MAE by 15%.</p>
+        <a href="https://github.com/Pkpallaw16/WalmartSalesForecast" target="_blank">GitHub</a>
+      </div>
+      <div class="project">
+        <h3>🧠 Hotel Search Engine</h3>
+        <p>Customized Word2Vec embeddings + log-likelihood scoring to improve hotel matching.</p>
+      </div>
+      <div class="project">
+        <h3>🎯 Clothing Layer Estimation</h3>
+        <p>CV pipeline using PyTorch + segmentation for thermal insulation estimation. [Under CRC review]</p>
+      </div>
     </div>
-  </section>
 
-  <section id="industry-exp">
-    <h2>Industry Experience</h2>
-    <div class="card">
-      <p><strong>Data Scientiist Intern</strong> – ABC Corp (2023–2023)</p>
-      <ul>
-        <li>Built predictive models (ARIMA, Prophet) to forecast quarterly department expenses, reducing forecasting errors by 18%.</li>
-        <li>Built and deployed a real-time object detection system using PyTorch and YOLO to monitor PPE compliance (helmets, gloves,
-goggles) in manufacturing environments, improving safety compliance by 25%.</li>
-        <li>Integrated OpenCV for automated alerts, reducing manual inspections and enhancing operational efficiency</li>
-      </ul>
-      <p><strong>Machine Learning Engineer</strong> – Freelancing (2018–2021)</p>
-      <ul>
-       <li>Analysed 5000+ customers power consumption pattern for data center client using Python, SQL & statistical modeling. </li>
-       <li>Implemented statistical models to segregate customers by consumption behavior that improved power forecasting accuracy by 5%.</li>
-       <li>Developed ensembled technique using RF & Xgboost to forecast beauty product demands using sales and product dataset.</li>
-       <li>Implemented data mining pipeline for a client using (Beautiful-soup, Request) to collect, transform and store customers’ reviews.</li>
-       <li>Built reviews sentiment detection model using Textblob, enhanced hotel menu design strategy, increased profit by 22% annually.</li>
-       <li>Built digital ad budget allocation model, integrating forecasts via regression and time-series models, achieving a 8% revenue lift.</li>
-       <li>Developed an ensemble framework combining clustering, region-based, and edge-detection methods for 2D/3D tumor segmentation,
-and extracted 150+ radiomic features, selecting 66 key predictors using XGBoost for accurate survival prediction in lung cancer
-patients.</li>
-      <li>Developed a deep learning-based multi-class chest X-ray classifier using an ensemble of ResNet50, InceptionV3, and DenseNet121
-with majority voting to classify 6 diseases, applied GradCAM for output visualization, and achieved precision of 0.86, recall of 0.87,
-and AUC of 0.82.</li>
-Software Developer,
-      </ul>
-      <p><strong>Software Developer</strong> – HPE (2017–2018)</p>
-      <ul>
-        <li>Built automated backup and recovery pipelines using RESTful APIs and scripting, reducing downtime by 25%.</li>
-        <li>Enhanced real-time data deduplication algorithms within SimpliVity’s data pipeline, achieving storage optimization by up to 20%.</li>
-        <li>Developed time-series models (ARIMA, LSTM) predicting infrastructure demand, enhancing planning accuracy by 30%.</li>
-        <li>Implemented predictive modeling using XGBoost to optimize backup schedules based on historical data and resource usage,
-improving backup efficiency by 24%.</li>
-        <li>Built a CI/CD pipeline using GitHub Actions to automate code testing and deployment, incorporating static analysis tools to
-ensure high-quality code integration</li>
-      </ul>
-      <p><strong>Application Engineer</strong> – Oracle India Pvt. Ltd. (2015–2017)</p>
-      <ul>
-        <li>Improved JD-Edwards ERP transportation module, leveraging C++ that supported over 5,000 businesses evolving requirements</li>
-        <li>Developed route optimization logic using Dijkstra’s algorithm for transportation module, reducing delivery time by 12%.</li>
-        <li>Designed a lead time estimation tool that calculated expected delivery times based on dispatch schedules and route history,
-improving delivery accuracy and client trust.</li>
-        <li>Designed a custom feature to allow real-time tracking of inventory across multiple warehouses, enabling centralized order fulfillment
-and reducing stock-outs.</li>
-        <li>Contributed to enhancing return logistics functionality by customizing workflows for inspection, restocking, and credit issuance,
-reducing cycle time for returns by 20%.</li>
+    <h2>🧩 Skills</h2>
+    <div class="skill">
+      <ul class="skills-list">
+        <li><strong>Technical Skills:</strong> Python, R, SQL, Bash, Git, C++, Java (basic)</li>
+        <li><strong>Software Engineering:</strong> FastAPI, REST APIs, Docker, CI/CD, GitHub Actions, Postman</li>
+        <li><strong>Machine Learning:</strong> Scikit-learn, XGBoost, SHAP, Time Series Forecasting, Recommendation Systems</li>
+        <li><strong>Deep Learning:</strong> PyTorch, TensorFlow, CNNs, Transformers</li>
+        <li><strong>Computer Vision:</strong> Object Detection, Segmentation, YOLO, U-Net</li>
+        <li><strong>NLP:</strong> BERT, GPT-3.5, Prompt Engineering, Sentiment Analysis</li>
+        <li><strong>Cloud Services:</strong> AWS (SageMaker), GCP (Kubernetes), Apache Airflow, Tableau</li>
       </ul>
     </div>
   </section>
 
-  <section id="research-exp">
-    <h2>Research Experience</h2>
-    <div class="card">
-      <p>Worked under <a href="https://matse.illinois.edu/people/profile/statt">Dr. Antonia Statt</a> on Polymer analytics, focusing on seggregation of groups. Led the project that revealed key hoopholes in data mining process and strategy improvements.</p>
+  <section id="resume">
+    <h1>📂 Resume</h1>
+    <p>Upload your latest resume if you'd like to save it here for recruiters (optional):</p>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <input type="file" accept=".pdf" name="resume" />
+      <input type="submit" value="Upload Resume" />
+    </form>
+    <p><a class="button-download" href="Pallaw_Kumar_Resume.pdf" target="_blank">Download Current Resume</a></p>
+  </section>
+
+  <section id="blog">
+    <h1>📚 Blog</h1>
+    <p>This site is Markdown-ready and blog posts will be managed via Jekyll. You can soon browse AI + ML engineering insights, deployment how-tos, and project breakdowns here.</p>
+    <p>💡 In the meantime, check out recent writing on <a href="https://www.linkedin.com/in/pallawk2/" target="_blank">LinkedIn</a>.</p>
+  </section>
+
+  <section id="research">
+    <h1>🔬 Research</h1>
+    <div class="research-item">
+      <h3>3D U-Net for Mitochondrial Segmentation</h3>
+      <p>Volumetric segmentation + morphology prediction for mitochondria using fluorescence microscopy; pipeline developed in PyTorch with patch-based training and advanced loss functions.</p>
     </div>
   </section>
 
-  <section id="achievements">
-    <h2>Rewards & Achievements</h2>
-    <div class="card">
-      <ul>
-        <li>>Best Visualizations Award Winner,  Illini Datatho 2023</li>
-        <li>Received >Best Overall Category Awar,  WIU DataFest, 202</li>
-      </ul>
+  <section id="teaching">
+    <h1>👨‍🏫 Teaching</h1>
+    <div class="teaching-item">
+      <h3>Graduate TA – Machine Learning @ UIUC</h3>
+      <p>Led office hours, reviewed assignments, and helped mentor students in applied ML concepts and projects.</p>
     </div>
   </section>
 
-  <footer>
-    <p>Made with ❤️ | Connect with me:</p>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/pallawk2/" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/Pkpallaw16" target="_blank">GitHub</a> |
-      <a href="https://leetcode.com/" target="_blank">LeetCode</a>
+  <section id="contact">
+    <h1>📬 Contact</h1>
+    <p>Email: <a href="mailto:pallawk2@illinois.edu">pallawk2@illinois.edu</a></p>
+    <p>Phone: +1 (217) 721-1569</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/pallawk2" target="_blank">linkedin.com/in/pallawk2</a></p>
+    <p>GitHub: <a href="https://github.com/Pkpallaw16" target="_blank">github.com/Pkpallaw16</a></p>
+  </section>
+      </main>
+  <aside>
+        <h3>📌 Current Focus</h3>
+        <ul>
+          <li>Learning LangChain for building LLM pipelines</li>
+          <li>Exploring Retrieval-Augmented Generation (RAG)</li>
+          <li>Studying Agentic AI workflows</li>
+          <li>Improving CUDA skills for DL optimization</li>
+        </ul>
+      </aside>
     </div>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Pallaw Kumar | Built for GitHub Pages | Designed with ❤️ and FastAPI deployments in mind</p>
+    </footer>
+  </div>
+<script>
+  const toggleBtn = document.getElementById('toggle-sidebar');
+  const sidebar = document.querySelector('aside');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
+    });
+  }
+</script>
 </body>
 </html>
