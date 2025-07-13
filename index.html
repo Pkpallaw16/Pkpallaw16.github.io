@@ -183,14 +183,15 @@
       <main>
          <section id="intro">
     <h1>👋 Hi, I'm Pallaw</h1>
-    <p><img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Emojione_1F4BB.svg" alt="Laptop icon" width="40" /> A Machine Learning Engineer and UIUC MCS+Stats graduate building practical AI systems with scalable infrastructure. I combine ML, data, and software to solve real-world problems with measurable impact.</p>
-    <a class="button-download" href="Pallaw_Kumar_Resume.pdf" target="_blank">📄 Download My Resume</a>
+<!--     <p><img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Emojione_1F4BB.svg" alt="Laptop icon" width="40" /> A Machine Learning Engineer and UIUC MCS+Stats graduate building practical AI systems with scalable infrastructure. I combine ML, data, and software to solve real-world problems with measurable impact.</p>
+        <p>A Machine Learning Engineer and UIUC MCS+Stats graduate building practical AI systems with scalable infrastructure. I combine ML, data, and software to solve real-world problems with measurable impact.</p>
+		 <a class="button-download" href="Pallaw_Kumar_Resume.pdf" target="_blank">📄 Download My Resume</a> -->
   </section>
 
   <section id="portfolio">
     <h1>🛠️ Featured Project</h1>
     <div class="featured-project">
-      <h2>FastAPI Model Deployment</h2>
+      <h2>Model Deployment using FastAPI</h2>
       <p>Lightweight RESTful API framework to deploy ML models for regression/classification tasks. Modular, Docker-ready, and easily integrated into CI/CD pipelines.</p>
       <img src="assets/fastapi_demo.png" alt="FastAPI Screenshot">
       <p><a href="https://github.com/Pkpallaw16/FastAPI" target="_blank">GitHub Repo</a></p>
@@ -206,6 +207,19 @@
       <div class="project">
         <h3>🧠 Hotel Search Engine</h3>
         <p>Customized Word2Vec embeddings + log-likelihood scoring to improve hotel matching.</p>
+	<a href="https://github.com/Pkpallaw16/Hotel-Search-Engine" target="_blank">GitHub</a>
+      </div>
+      <div class="project">
+        <h3>⚙️ Convolution Optimization with CUDA</h3>
+        <p>Implemented custom CNN convolution kernels in C++ using CUDA; optimized GPU inference performance using tensor
+core strategies. Utilized NVIDIA profiling tools (nsys, ncu) for detailed performance tuning.</p>
+	<a href="https://github.com/Pkpallaw16/CS483-Applied-Parallel-Programming-CUDA-Programming" target="_blank">GitHub</a>
+      </div>
+      <div class="project">
+        <h3>🚗 AV Perception Pipeline (ROS + YOLO)</h3>
+        <p>Built and containerized a traffic sign detection module in C++/Python using YOLO
+and OpenCV for real-time inference in ROS-based simulation.</p>
+<!-- 	<a href="https://github.com/Pkpallaw16/Image-Caption-Generation" target="_blank">GitHub</a> -->
       </div>
       <div class="project">
         <h3>🎯 Clothing Layer Estimation</h3>
@@ -221,7 +235,7 @@
         <li><strong>Machine Learning:</strong> Scikit-learn, XGBoost, SHAP, Time Series Forecasting, Recommendation Systems</li>
         <li><strong>Deep Learning:</strong> PyTorch, TensorFlow, CNNs, Transformers</li>
         <li><strong>Computer Vision:</strong> Object Detection, Segmentation, YOLO, U-Net</li>
-        <li><strong>NLP:</strong> BERT, GPT-3.5, Prompt Engineering, Sentiment Analysis</li>
+        <li><strong>NLP:</strong> BERT, GPT-3.5, Prompt Engineering, Sentiment Analysis, LangChain (Learning), AgenticAI (Learning)</li>
         <li><strong>Cloud Services:</strong> AWS (SageMaker), GCP (Kubernetes), Apache Airflow, Tableau</li>
       </ul>
     </div>
@@ -239,8 +253,8 @@
 
   <section id="blog">
     <h1>📚 Blog</h1>
-    <p>This site is Markdown-ready and blog posts will be managed via Jekyll. You can soon browse AI + ML engineering insights, deployment how-tos, and project breakdowns here.</p>
-    <p>💡 In the meantime, check out recent writing on <a href="https://www.linkedin.com/in/pallawk2/" target="_blank">LinkedIn</a>.</p>
+<!--     <p>This site is Markdown-ready and blog posts will be managed via Jekyll. You can soon browse AI + ML engineering insights, deployment how-tos, and project breakdowns here.</p> -->
+    <p>💡 In the meantime, check out recent writing on <a href="https://www.linkedin.com/posts/pallawk2_machinelearning-mlops-mlengineering-activity-7349438563991605249-0Y3h?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHpwRwBk5EzSZaMLbNN2zluT98-MacZbl4" target="_blank">LinkedIn</a>.</p>
   </section>
 
   <section id="research">
@@ -248,14 +262,27 @@
     <div class="research-item">
       <h3>3D U-Net for Mitochondrial Segmentation</h3>
       <p>Volumetric segmentation + morphology prediction for mitochondria using fluorescence microscopy; pipeline developed in PyTorch with patch-based training and advanced loss functions.</p>
+      <h3>Graduate RA - Designing PLA (Polylactic Acid), sponsored by IBM @ UIUC</h3>
+      <p>Conducted in-depth analytical research on the behavioral changes of 200+ polymers during heating and cooling cycles, applying
+unsupervised machine learning techniques such as clustering (K-Means, DBSCAN) and dimensionality reduction (PCA, UMAP,
+UMAP, IsoMap, MDS, t-SNE) to analyze attributes captured at 20,000 temperature data points per polymer.</p>
+      <p>The analysis outcome showed many polymers changed their statistical properties during heating and reheating which is not as
+expected and needs further investigation</p>
     </div>
   </section>
 
   <section id="teaching">
-    <h1>👨‍🏫 Teaching</h1>
+    <h1>👨‍🏫 Teaching & Mentorship</h1>
     <div class="teaching-item">
-      <h3>Graduate TA – Machine Learning @ UIUC</h3>
-      <p>Led office hours, reviewed assignments, and helped mentor students in applied ML concepts and projects.</p>
+      <h3>Graduate TA @ UIUC</h3>
+      <p>Served as a Graduate Teaching Assistant for three consecutive terms (Fall 2023–Fall 2024) in Master’s level courses (ACCY570-
+Data Analytics Foundation and BDI513-Data Storytelling), mentoring a class of 200+ students by managing over 80 assignments
+per term, hosting two weekly office hours for personalized guidance, and effectively balancing these responsibilities with over 120
+credit hours of coursework.</p>
+      <h3>PhD RA @ UIUC</h3>
+      <p>Mentored and guided Business School PhD scholars in the successful implementation of research projects by providing technical
+support in data source identification, data mapping, exploration, and functionality execution. Assisted with Python programming,
+web scraping, code debugging, and infrastructure setup, fostering technical development and project execution.</p>
     </div>
   </section>
 
@@ -280,7 +307,7 @@
       </aside>
     </div>
     <footer>
-      <p>&copy; 2025 Pallaw Kumar | Built for GitHub Pages | Designed with ❤️ and FastAPI deployments in mind</p>
+      <p>&copy; 2025 Pallaw Kumar | Built and Designed with ❤️ </p>
     </footer>
   </div>
 <script>
